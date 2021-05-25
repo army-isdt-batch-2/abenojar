@@ -2,6 +2,7 @@
 @extends('layouts.main')
 @section('title', $active)
 @section('content')
+<!-- test -->
     <div class="row align-items-center"> 
         <div class="col-12 mt-5">
             <div class="card">
