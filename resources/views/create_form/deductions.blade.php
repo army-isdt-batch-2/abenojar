@@ -18,7 +18,8 @@
                     </div>
 
                     <div class="col-12">
-                        <form class="row g-3">
+                        <form class="row g-3" method="post" action="">
+                            @csrf
                             <div class="col-md-4">
                                 <label for="inputEmail4" class="form-label">Contribution Type</label>
                                 <select name="" id="" class="form-control">
@@ -28,7 +29,7 @@
                             </div> 
                             <div class="col-md-8">
                                 <label for="inputEmail4" class="form-label">Base Range</label>
-                                <input type="text" class="form-control" id="inputEmail4">
+                                <input type="text" class="form-control" id="inputEmail4" name="base_range" required>
                             </div> 
                             <div class="col-md-4">
                                 <label for="inputEmail4" class="form-label">Monthly Contribution</label>
