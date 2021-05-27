@@ -2,6 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
  
+foreach (glob(__DIR__ . '/modules/*.php') as $filename) {
+    include $filename;
+}
+
+/**
+  * Routes below should be moved to 
+  * their respective folders in module
+ */
+
 Route::get('/login', [
     App\Http\Controllers\LoginController::class,
     'index'
@@ -23,10 +32,6 @@ Route::get('/login', [
 // ]);
 
 
-Route::get('/departments/create', [
-    App\Http\Controllers\LoginController::class,
-    'departments_create'
-])->name('deparment.create');
 
 
 Route::get('/employees/create', [
@@ -59,10 +64,6 @@ Route::get('/payslips/create', [
 ])->name('payslip.create');
 
  
-Route::get('/departments', [
-    App\Http\Controllers\LoginController::class,
-    'departments'
-])->name('departments');
 Route::get('/employees', [
     App\Http\Controllers\LoginController::class,
     'employees'

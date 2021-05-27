@@ -21,10 +21,6 @@ class LoginController extends Controller
         return view('layout');
     }
 
-    public function departments()
-    {
-        return view('departments');
-    }
     public function employees()
     {
         return view('employees');
@@ -54,12 +50,7 @@ class LoginController extends Controller
     {
         return view('form');
     }
-    
-    public function departments_create()
-    {
-        return view('create_form.departments');
-    }
-    
+     
     public function employees_create()
     {
         return view('create_form.employees');
